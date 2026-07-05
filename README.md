@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <code>gem install tim</code>
+  <code>gem install tim_engine</code>
 </p>
 
 <p align="center">
@@ -16,13 +16,13 @@
 Or add to your Gemfile:
 
 ```ruby
-gem "tim"
+gem "tim_engine"
 ```
 
 ## Usage
 
 ```ruby
-require "tim"
+require "tim_engine"
 
 # Initialize the engine (auto-detects templates directory)
 Tim.init("templates", "output", Dir.pwd)
