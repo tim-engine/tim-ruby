@@ -1,32 +1,47 @@
 <p align="center">
-  <img src="https://github.com/openpeeps/PKG/blob/main/.github/logo.png" width="90px"><br>
-  OpenPeeps repository template for developing libraries,<br>projects and other cool things. 👑 Written in Nim language
+  <img src="https://raw.githubusercontent.com/openpeeps/tim/main/.github/tim_logo.png" alt="Tim - Template Engine" width="120px" height="120px"><br>
+  ⚡️ A high-performance front-end engine as a Ruby Gem<br>
+  <strong>Fast</strong> • <strong>Compiled</strong> • <strong>Source-to-Source</strong> • <strong>Interpreter</strong><br>
 </p>
 
 <p align="center">
-  <code>nimble install {PKG}</code>
+  <code>gem install tim</code>
 </p>
 
 <p align="center">
-  <a href="https://openpeeps.github.io/{pkg}">API reference</a><br>
-  <img src="https://github.com/openpeeps/pistachio/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/pistachio/workflows/docs/badge.svg" alt="Github Actions">
+  <a href="https://tim.openpeeps.dev/">Official docs</a><br> | <a href="https://openpeeps.github.io/tim/">API reference</a><br>
+  <img src="https://github.com/openpeeps/tim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/tim/workflows/docs/badge.svg" alt="Github Actions">
 </p>
 
-## 😍 Key Features
-- [x] Open Source | `MIT` License
-- [x] Written in Nim language
+Or add to your Gemfile:
 
-## Examples
-...
+```ruby
+gem "tim"
+```
 
-### ❤ Contributions & Support
-- 🐛 Found a bug? [Create a new Issue](https://github.com/openpeeps/pistachio/issues)
-- 👋 Wanna help? [Fork it!](https://github.com/openpeeps/pistachio/fork)
+## Usage
+
+```ruby
+require "tim"
+
+# Initialize the engine (auto-detects templates directory)
+Tim.init("templates", "output", Dir.pwd)
+
+# Render a view with a layout
+html = Tim.render("index", { title: "Hello" })
+
+# Render a standalone view
+html = Tim.renderView("error", { message: "Not found" })
+```
+
+## Development
+The native extension is built via [Clue](https://github.com/openpeeps/clue) and the Nim compiler.
+
 
 |  |  |
 |---|---|
-| <a href="https://opencode.ai/go?ref=BHMEEK48QX"><img src="https://github.com/openpeeps/pistachio/blob/main/.github/opencode.png" alt="OpenCode"></a> | Switch to **Open-Source LLM models** via OpenCode AI, choosing from a variety of powerful models such as DeepSeek, Qwen, Kimi, GLM-5, MiniMax, MiMo. 🍕 [Use our referral link to get started!](https://opencode.ai/go?ref=BHMEEK48QX)|
+| <a href="https://opencode.ai/go?ref=BHMEEK48QX"><img src="https://github.com/openpeeps/pistachio/blob/main/.github/opencode.png" alt="OpenCode"></a> | Switch to **Open-Source LLMs** via OpenCode GO, choosing from a variety of powerful models such as DeepSeek, Qwen, Kimi, GLM-5, MiniMax, MiMo. 🍕 [Use our referral link to get started!](https://opencode.ai/go?ref=BHMEEK48QX)|
 
 ### 🎩 License
-MIT license. [Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
-Copyright OpenPeeps & Contributors &mdash; All rights reserved.
+Tim Engine | `LGPLv3` license. [Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
+Copyright &copy; 2026 OpenPeeps & Contributors &mdash; All rights reserved.
